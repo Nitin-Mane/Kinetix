@@ -1,0 +1,18 @@
+[package]
+name        = "kxc"
+description = "Kinetix Language Compiler CLI"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer    = { workspace = true }
+kinetix_parser   = { workspace = true }
+kinetix_types    = { workspace = true }
+kinetix_hir      = { workspace = true }
+kinetix_codegen  = { workspace = true }
+kinetix_bytecode = { workspace = true }
+clap             = { workspace = true }
+log              = { workspace = true }
+env_logger       = { workspace = true }

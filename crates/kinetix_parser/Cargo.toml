@@ -1,0 +1,13 @@
+[package]
+name        = "kinetix_parser"
+description = "Pratt parser that produces an AST from a Kinetix token stream"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer = { workspace = true }
+kinetix_ast   = { workspace = true }
+smol_str      = { workspace = true }
+thiserror     = { workspace = true }

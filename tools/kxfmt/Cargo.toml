@@ -1,0 +1,12 @@
+[package]
+name        = "kxfmt"
+description = "Kinetix Code Formatter CLI"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer  = { workspace = true }
+kinetix_parser = { workspace = true }
+clap           = { workspace = true }

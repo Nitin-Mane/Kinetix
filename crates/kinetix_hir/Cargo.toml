@@ -1,0 +1,12 @@
+[package]
+name        = "kinetix_hir"
+description = "High-level Intermediate Representation for Kinetix"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_ast   = { workspace = true }
+kinetix_types = { workspace = true }
+smol_str      = { workspace = true }

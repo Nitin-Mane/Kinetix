@@ -1,0 +1,14 @@
+[package]
+name        = "kinetix_lexer"
+description = "Tokenizer (lexer) for the Kinetix programming language"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+thiserror   = { workspace = true }
+unicode-width = { workspace = true }
+
+[dev-dependencies]
+# nothing extra needed for unit tests

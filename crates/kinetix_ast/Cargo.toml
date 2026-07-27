@@ -1,0 +1,12 @@
+[package]
+name        = "kinetix_ast"
+description = "Abstract Syntax Tree node definitions for the Kinetix language"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer = { workspace = true }
+smol_str      = { workspace = true }
+serde         = { workspace = true }

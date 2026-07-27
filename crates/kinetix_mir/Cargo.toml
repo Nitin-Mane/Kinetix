@@ -1,0 +1,12 @@
+[package]
+name        = "kinetix_mir"
+description = "Mid-level IR and optimization passes for Kinetix"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_hir   = { workspace = true }
+kinetix_types = { workspace = true }
+smol_str      = { workspace = true }

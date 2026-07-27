@@ -1,0 +1,23 @@
+[package]
+name        = "kxr"
+description = "Kinetix JIT Runner & Interactive REPL CLI"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer    = { workspace = true }
+kinetix_parser   = { workspace = true }
+kinetix_types    = { workspace = true }
+kinetix_hir      = { workspace = true }
+kinetix_codegen  = { workspace = true }
+kinetix_bytecode = { workspace = true }
+kinetix_vm       = { workspace = true }
+kinetix_jit      = { workspace = true }
+kinetix_stdlib   = { workspace = true }
+kinetix_ide      = { workspace = true }
+clap             = { workspace = true }
+rustyline        = { workspace = true }
+log              = { workspace = true }
+env_logger       = { workspace = true }

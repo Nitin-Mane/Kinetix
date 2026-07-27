@@ -1,0 +1,11 @@
+[package]
+name        = "kinetix_stdlib"
+description = "Standard library for the Kinetix programming language"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_vm  = { workspace = true }
+log         = { workspace = true }

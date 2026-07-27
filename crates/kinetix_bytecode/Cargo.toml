@@ -1,0 +1,11 @@
+[package]
+name        = "kinetix_bytecode"
+description = "Bytecode format and instruction set for the Kinetix VM"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+serde    = { workspace = true }
+thiserror = { workspace = true }

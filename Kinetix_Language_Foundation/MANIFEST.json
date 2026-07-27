@@ -1,0 +1,205 @@
+{
+  "project": "Kinetix Language Foundation",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 284,
+      "sha256": "47718f629e0fa663b3389d436f0ab2559ff786309861f4c76003a84806b98b4c"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 137,
+      "sha256": "e5e24a636d7de32d16e161547b7af1abaa1df3fc182efc7f76c732d5cf03e21d"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 696,
+      "sha256": "24c086ca9167a4a1c0d007db689bbc5d1fd88b9f844b3feb10a7ca4303c384a1"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 216,
+      "sha256": "b5e42f738cb733ddd962e1de95eeeffd36848f5d041bdca1941188f4215574a9"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1376,
+      "sha256": "e97ea3c9e6f94973fe53ebf2456368fcc71a15a5734eb3ab11374be2c390ad76"
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "bytes": 1182,
+      "sha256": "65e38833923acdf302bf8240f26e7f4dcbd51d4af386af9b263af753b9eb1680"
+    },
+    {
+      "path": "LICENSE_RECOMMENDATION.md",
+      "bytes": 963,
+      "sha256": "11441072e4599ac219279e43080ddd141732978cca593a83740d7aba835ebfb5"
+    },
+    {
+      "path": "PROJECT_STRUCTURE.md",
+      "bytes": 2770,
+      "sha256": "2f21a7b417a46f630c24627c768418bd9ce961744a7e51ae52ee79e5d4f455d0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3903,
+      "sha256": "fe3b1d3be575357d61f3317cee3c6cfd20c3ef5aacc9bc29d68272e2cc7add13"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 14269,
+      "sha256": "5044415a8ffdb0622eefad16024a1a9199c2587c7e1e80c9e789b2b39056b1c8"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1278,
+      "sha256": "ecb64cc76b0526432ed14ad20f6a065def5973bd8f737f6ea554ba5de22c32bd"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 1972,
+      "sha256": "f1899373275ae98c32180887800f92dfaf06957308c99d72ca0c5d12d926fc1b"
+    },
+    {
+      "path": "adr/0001-language-name-and-extension.md",
+      "bytes": 483,
+      "sha256": "2a1d97079e4475b11ff49cfc0dfab53b23e36c6873c62443017feba3cb4ef18d"
+    },
+    {
+      "path": "adr/0002-c-abi-as-interop-anchor.md",
+      "bytes": 640,
+      "sha256": "129b79e50560dcc24952cfedd1996ca0c4b437b8194f8f90eb91955edf2d135b"
+    },
+    {
+      "path": "adr/0003-llvm-mlir-backend.md",
+      "bytes": 548,
+      "sha256": "a62be9d3b21bc1ac75f5022b91ac1fc9c39ec3fc1c70bf00cd1130eec6c5f0cb"
+    },
+    {
+      "path": "adr/0004-no-universal-cpp-performance-claim.md",
+      "bytes": 608,
+      "sha256": "c12a0a6c4c1f4223babf2997efff210dd1e3d7295336dfc3d2230a59e9a8b7a9"
+    },
+    {
+      "path": "agent.md",
+      "bytes": 6640,
+      "sha256": "48ad89f28840d88e5f02c16d0cd27cce6f5e6ab9c9b16448669a3002eaca8c0e"
+    },
+    {
+      "path": "docs/00_VISION_AND_NON_GOALS.md",
+      "bytes": 2243,
+      "sha256": "ca8f5e85d5de444e6dddb03c81b394259be7f4eb8e3fa810bb96dd44f80a15e4"
+    },
+    {
+      "path": "docs/01_LANGUAGE_DESIGN.md",
+      "bytes": 5050,
+      "sha256": "b5260c85dfa347c6843804dff97b5554313c63436b09196039cf37d51961edb0"
+    },
+    {
+      "path": "docs/02_MATH_AND_ROBOTICS_MODEL.md",
+      "bytes": 4288,
+      "sha256": "c40e605f51a541e717fd863c5f61a4aeefd99c4f951c10546bc74240c5a4e630"
+    },
+    {
+      "path": "docs/03_COMPILER_ARCHITECTURE.md",
+      "bytes": 4279,
+      "sha256": "eb2b13f736b8c3398899fa8a924d0d7a530bdd1405100fc595fd01437a573fe0"
+    },
+    {
+      "path": "docs/04_INTEROPERABILITY.md",
+      "bytes": 3493,
+      "sha256": "64154d09bdacb98d48c2ed73296e245c186c03c8534dd5ccdcf7015ada679160"
+    },
+    {
+      "path": "docs/05_ROS2_INTEGRATION.md",
+      "bytes": 3942,
+      "sha256": "39021a740ba839b286f14a346b2d74fa1c841c05244b4b89e2e0d3c8e53ab567"
+    },
+    {
+      "path": "docs/06_PERFORMANCE_STRATEGY.md",
+      "bytes": 3481,
+      "sha256": "d824596bdcba1b4372e53c4e3f627fe80866ef1e66992bd2a95a1f05a4a43703"
+    },
+    {
+      "path": "docs/07_MEMORY_AND_REALTIME.md",
+      "bytes": 2754,
+      "sha256": "66158b10ffc34e81e36e2c15e40406b9341c8cbed3ef8a690bb4776e13a011a0"
+    },
+    {
+      "path": "docs/08_TESTING_AND_VERIFICATION.md",
+      "bytes": 2113,
+      "sha256": "56e0600f7584b1ec79624f662d08913ac1ab9e7239e2626c693f525466430bf8"
+    },
+    {
+      "path": "docs/09_TOOLCHAIN_AND_DX.md",
+      "bytes": 1864,
+      "sha256": "e808a7f7902454c6ec2906e093510ed5cde7ef1d893e27e072bc17afffc428e6"
+    },
+    {
+      "path": "docs/10_STANDARD_LIBRARY.md",
+      "bytes": 1766,
+      "sha256": "f877cb503cbf66b4fd1a2714cf53c376189531cc3b6b9f902a9b14d2e0102cc3"
+    },
+    {
+      "path": "docs/11_RELEASE_GOVERNANCE.md",
+      "bytes": 1263,
+      "sha256": "a7d645f238f066f45f2aabba5481a4fec9242135337ffb7c041ad0210125244f"
+    },
+    {
+      "path": "docs/12_RISK_REGISTER.md",
+      "bytes": 2300,
+      "sha256": "f510e48e5f38b312649bc9da0aac11a515341ac51c690f9c7d519528cf68249f"
+    },
+    {
+      "path": "docs/13_BENCHMARK_PLAN.md",
+      "bytes": 3009,
+      "sha256": "f2d401523e9c176030ba0e8437c2a9112bcab7a948aaaf4463f008ed05d4f142"
+    },
+    {
+      "path": "docs/14_INITIAL_BACKLOG.md",
+      "bytes": 1983,
+      "sha256": "5c0cc42d7afdf888fd7b1d139efd345295f89dc5bebd40ca10e80bc3c9e5e4cb"
+    },
+    {
+      "path": "examples/frame_safe_kinematics.kx",
+      "bytes": 506,
+      "sha256": "4ead8ef88c1b5595f1f01f6d8e89e54596bad8381b0e9760df74f9df94188855"
+    },
+    {
+      "path": "examples/hello.kx",
+      "bytes": 168,
+      "sha256": "a9e9b2c5ef9109e0fa53c99625e5bbb0cbeee93edf144b973cdc041a0f63942c"
+    },
+    {
+      "path": "examples/matrix_kernel.kx",
+      "bytes": 356,
+      "sha256": "b06ce2a591395b1e72ae387040a29cb3542c72addaa43c31a913024e22d8cb8b"
+    },
+    {
+      "path": "examples/number_bases.kx",
+      "bytes": 291,
+      "sha256": "cf2d8efadb5cd5ad8b9eb6bd91eccd8c21b7e8dc8ba8c108a6902968ddd488c6"
+    },
+    {
+      "path": "examples/ros2_talker_concept.kx",
+      "bytes": 482,
+      "sha256": "c3186c91301260fb839390227571d8980aec7741e87bad68ad604e3c3be78b5e"
+    },
+    {
+      "path": "grammar/Kinetix.ebnf",
+      "bytes": 5653,
+      "sha256": "cd9cf0c2b36cd7ac46825dc67a6d255318f4929cae86f9032aac34025df9e3a7"
+    },
+    {
+      "path": "rfcs/0000-template.md",
+      "bytes": 1013,
+      "sha256": "837b9694d3267d90c666b8b75eb5ef13e1a50eadbb7c712e43ee5fc4565ce937"
+    },
+    {
+      "path": "skills.md",
+      "bytes": 6415,
+      "sha256": "1d538950c6c836144d1766064575f8c63faa0ca2d9bb2c5d853fe6be4b2a3c52"
+    }
+  ]
+}

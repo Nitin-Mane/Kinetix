@@ -1,0 +1,17 @@
+module examples.matrix_kernel;
+
+use kx.math::{mat, vec};
+
+fn transform_point(t: mat<f32, 4, 4>, p: vec<f32, 4>) -> vec<f32, 4> {
+    return t * p;
+}
+
+fn main() -> i32 {
+    let t: mat<f32, 4, 4> = mat.identity();
+    let p: vec<f32, 4> = [1.0, 2.0, 3.0, 1.0];
+    let q = transform_point(t, p);
+    if q[3] == 1.0 {
+        return 0;
+    }
+    return 1;
+}

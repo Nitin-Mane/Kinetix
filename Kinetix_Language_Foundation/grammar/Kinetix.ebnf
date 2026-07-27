@@ -1,0 +1,105 @@
+(* Kinetix draft grammar v0.1. This grammar is intentionally incomplete and
+   must be synchronized with accepted language RFCs. *)
+
+compilation_unit = { module_decl | import_decl | declaration } ;
+
+module_decl = "module", qualified_name, ";" ;
+import_decl = ("use" | "import"), qualified_name, [ import_list ], ";" ;
+import_list = "::{", identifier, { ",", identifier }, [","], "}" ;
+
+declaration = attribute_list, (const_decl | struct_decl | enum_decl | function_decl | frame_decl | extern_block) ;
+attribute_list = { "@", identifier, [ "(", [ argument_list ], ")" ] } ;
+
+const_decl = "const", identifier, ":", type, "=", expression, ";" ;
+frame_decl = "frame", identifier, ";" ;
+
+struct_decl = "struct", identifier, [ generic_params ], "{", { field_decl }, "}" ;
+field_decl = identifier, ":", type, [ "=" , expression ], "," ;
+
+enum_decl = "enum", identifier, [ ":", type ], "{", { enum_case }, "}" ;
+enum_case = identifier, [ "=", expression ], "," ;
+
+function_decl = "fn", identifier, [ generic_params ], "(", [ parameter_list ], ")", [ "->", type ], block ;
+parameter_list = parameter, { ",", parameter }, [","] ;
+parameter = ["mut"], identifier, ":", type ;
+
+generic_params = "<", generic_param, { ",", generic_param }, ">" ;
+generic_param = ["const"], identifier, [ ":", type ] ;
+
+extern_block = "extern", string_literal, [ "library", string_literal ], "{", { extern_function }, "}" ;
+extern_function = "fn", identifier, "(", [ parameter_list ], ")", [ "->", type ], ";" ;
+
+block = "{", { statement }, [ expression ], "}" ;
+statement = let_stmt | var_stmt | expression_stmt | return_stmt | break_stmt | continue_stmt | while_stmt | loop_stmt | unsafe_stmt ;
+let_stmt = "let", pattern, [ ":", type ], "=", expression, ";" ;
+var_stmt = "var", pattern, [ ":", type ], [ "=", expression ], ";" ;
+return_stmt = "return", [ expression ], ";" ;
+break_stmt = "break", [ expression ], ";" ;
+continue_stmt = "continue", ";" ;
+while_stmt = "while", expression, block ;
+loop_stmt = "loop", block ;
+unsafe_stmt = "unsafe", block ;
+expression_stmt = expression, ";" ;
+
+expression = assignment ;
+assignment = conditional, [ assignment_op, assignment ] ;
+assignment_op = "=" | "+=" | "-=" | "*=" | "/=" | "%=" | "&=" | "|=" | "^=" | "<<=" | ">>=" ;
+conditional = logical_or, [ "if", logical_or, "else", conditional ] ;
+logical_or = logical_and, { "||", logical_and } ;
+logical_and = bit_or, { "&&", bit_or } ;
+bit_or = bit_xor, { "|", bit_xor } ;
+bit_xor = bit_and, { "^", bit_and } ;
+bit_and = equality, { "&", equality } ;
+equality = comparison, { ("==" | "!="), comparison } ;
+comparison = shift, { ("<" | "<=" | ">" | ">="), shift } ;
+shift = additive, { ("<<" | ">>"), additive } ;
+additive = multiplicative, { ("+" | "-"), multiplicative } ;
+multiplicative = unary, { ("*" | "/" | "%"), unary } ;
+unary = { "!" | "~" | "-" | "+" | "*" | "&" }, postfix ;
+postfix = primary, { call_suffix | index_suffix | field_suffix | try_suffix } ;
+call_suffix = "(", [ argument_list ], ")" ;
+argument_list = expression, { ",", expression }, [","] ;
+index_suffix = "[", expression, [ ":", expression ], "]" ;
+field_suffix = ".", identifier ;
+try_suffix = "?" ;
+
+primary = literal | identifier | qualified_name | array_literal | struct_literal | parenthesized | if_expr | block ;
+parenthesized = "(", expression, ")" ;
+array_literal = "[", [ expression, { ",", expression }, [","] ], "]" ;
+struct_literal = qualified_name, "{", { identifier, ":", expression, "," }, "}" ;
+if_expr = "if", expression, block, [ "else", (block | if_expr) ] ;
+
+pattern = identifier | "_" ;
+
+type = reference_type | pointer_type | array_type | tuple_type | named_type ;
+reference_type = "&", ["mut"], type ;
+pointer_type = "*", ["volatile"], ["const" | "mut"], type ;
+array_type = "[", type, ";", expression, "]" ;
+tuple_type = "(", [ type, { ",", type }, [","] ], ")" ;
+named_type = qualified_name, [ "<", generic_argument, { ",", generic_argument }, ">" ] ;
+generic_argument = type | expression ;
+
+literal = integer_literal | float_literal | bool_literal | string_literal | char_literal ;
+bool_literal = "true" | "false" ;
+integer_literal = binary_literal | octal_literal | decimal_literal | hexadecimal_literal ;
+binary_literal = "0b", binary_digit, { binary_digit | "_" }, [ integer_suffix ] ;
+octal_literal = "0o", octal_digit, { octal_digit | "_" }, [ integer_suffix ] ;
+decimal_literal = decimal_digit, { decimal_digit | "_" }, [ integer_suffix ] ;
+hexadecimal_literal = "0x", hex_digit, { hex_digit | "_" }, [ integer_suffix ] ;
+integer_suffix = "i8" | "i16" | "i32" | "i64" | "i128" | "u8" | "u16" | "u32" | "u64" | "u128" | "isize" | "usize" ;
+float_literal = decimal_digit, { decimal_digit | "_" }, ".", decimal_digit, { decimal_digit | "_" }, [ exponent ], [ "f16" | "f32" | "f64" ] ;
+exponent = ("e" | "E"), ["+" | "-"], decimal_digit, { decimal_digit | "_" } ;
+
+qualified_name = identifier, { ".", identifier } ;
+identifier = (letter | "_"), { letter | decimal_digit | "_" } ;
+letter = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" |
+         "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" |
+         "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" |
+         "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" ;
+binary_digit = "0" | "1" ;
+octal_digit = binary_digit | "2" | "3" | "4" | "5" | "6" | "7" ;
+decimal_digit = octal_digit | "8" | "9" ;
+hex_digit = decimal_digit | "A" | "B" | "C" | "D" | "E" | "F" | "a" | "b" | "c" | "d" | "e" | "f" ;
+
+string_literal = '"', { ? escaped UTF-8 character ? }, '"' ;
+char_literal = "'", ? one escaped Unicode scalar ?, "'" ;

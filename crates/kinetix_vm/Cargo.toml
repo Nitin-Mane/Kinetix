@@ -1,0 +1,12 @@
+[package]
+name        = "kinetix_vm"
+description = "Register-based virtual machine for the Kinetix language"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_bytecode = { workspace = true }
+thiserror        = { workspace = true }
+log              = { workspace = true }

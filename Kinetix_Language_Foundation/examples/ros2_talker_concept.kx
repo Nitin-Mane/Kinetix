@@ -1,0 +1,18 @@
+module examples.ros2_talker;
+
+use ros2::{Node, qos};
+use std_msgs.msg.String;
+
+fn main() -> Result<void, ros2.Error> {
+    let mut node = Node.create("kx_talker")?;
+    let publisher = node.publisher<String>("chatter", qos.default())?;
+    let mut sequence: u64 = 0;
+
+    node.every(1s, fn() -> Result<void, ros2.Error> {
+        publisher.publish(String { data: format("KX message {}", sequence) })?;
+        sequence += 1;
+        return ok();
+    })?;
+
+    return node.spin();
+}

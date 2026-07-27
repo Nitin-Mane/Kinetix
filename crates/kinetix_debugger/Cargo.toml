@@ -1,0 +1,16 @@
+[package]
+name        = "kinetix_debugger"
+description = "DAP (Debug Adapter Protocol) debugger for Kinetix"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_vm       = { workspace = true }
+kinetix_bytecode = { workspace = true }
+serde            = { workspace = true }
+serde_json       = { workspace = true }
+tokio            = { workspace = true }
+thiserror        = { workspace = true }
+log              = { workspace = true }

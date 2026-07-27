@@ -1,0 +1,11 @@
+[package]
+name        = "kinetix_syntax"
+description = "Syntax highlighting bridge between the Kinetix lexer and egui"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer = { path = "../kinetix_lexer" }
+egui          = { workspace = true }

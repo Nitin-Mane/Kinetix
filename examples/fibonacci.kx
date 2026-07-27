@@ -1,0 +1,19 @@
+// Kinetix Fibonacci & Vector Benchmark
+// File extension: .kx
+
+fn fib(n: int) -> int {
+    if n <= 1 {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+
+fn main() {
+    println("=== Kinetix Fibonacci ===");
+    let n = 20;
+    let result = fib(n);
+    println("Fibonacci(");
+    println(n);
+    println(") =");
+    println(result);
+}

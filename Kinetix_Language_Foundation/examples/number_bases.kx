@@ -1,0 +1,14 @@
+module examples.number_bases;
+
+fn main() -> i32 {
+    let binary: u8 = 0b1010_1010u8;
+    let octal: u8 = 0o252u8;
+    let decimal: u8 = 170u8;
+    let hexadecimal: u8 = 0xAAu8;
+
+    if binary != octal || octal != decimal || decimal != hexadecimal {
+        return 1;
+    }
+
+    return 0;
+}

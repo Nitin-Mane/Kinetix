@@ -1,0 +1,14 @@
+[package]
+name        = "kinetix_codegen"
+description = "HIR-to-bytecode compiler for the Kinetix language"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_hir      = { workspace = true }
+kinetix_types    = { workspace = true }
+kinetix_bytecode = { workspace = true }
+smol_str         = { workspace = true }
+thiserror        = { workspace = true }

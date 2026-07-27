@@ -1,0 +1,20 @@
+[package]
+name        = "kinetix_lsp"
+description = "Language Server Protocol implementation for Kinetix"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer  = { workspace = true }
+kinetix_ast    = { workspace = true }
+kinetix_parser = { workspace = true }
+kinetix_types  = { workspace = true }
+lsp-server     = { workspace = true }
+lsp-types      = { workspace = true }
+serde_json     = { workspace = true }
+serde          = { workspace = true }
+tokio          = { workspace = true }
+thiserror      = { workspace = true }
+log            = { workspace = true }

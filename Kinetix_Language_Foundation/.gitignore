@@ -1,0 +1,33 @@
+# Build output
+build/
+out/
+cmake-build-*/
+
+# Generated compiler output
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.bin
+*.hex
+*.ll
+*.bc
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Benchmarks and traces
+benchmark-results/
+traces/

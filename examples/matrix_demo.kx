@@ -1,0 +1,36 @@
+// Kinetix Matrix & Linear Algebra Demo
+// File extension: .kx
+
+fn main() {
+    println("=== Kinetix Matrix Operations Demo ===");
+
+    // Matrix creation
+    let A = [[1.0, 2.0]; [3.0, 4.0]];
+    let B = [[5.0, 6.0]; [7.0, 8.0]];
+
+    println("Matrix A:");
+    println(A);
+
+    println("Matrix B:");
+    println(B);
+
+    // Matrix Multiplication
+    let C = matmul(A, B);
+    println("Matrix C = A * B:");
+    println(C);
+
+    // Matrix Transpose
+    let At = transpose(A);
+    println("Transpose of A:");
+    println(At);
+
+    // Trace
+    let tr = trace(A);
+    println("Trace of A:");
+    println(tr);
+
+    // Linspace vector creation
+    let v = linspace(0.0, 1.0, 5);
+    println("Linspace 0 to 1 with 5 points:");
+    println(v);
+}

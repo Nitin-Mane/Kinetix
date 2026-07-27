@@ -1,0 +1,18 @@
+[package]
+name        = "kinetix_jit"
+description = "JIT compilation backend for Kinetix using Cranelift"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_bytecode    = { workspace = true }
+kinetix_vm          = { workspace = true }
+cranelift-codegen   = { workspace = true }
+cranelift-frontend  = { workspace = true }
+cranelift-jit       = { workspace = true }
+cranelift-module    = { workspace = true }
+cranelift-native    = { workspace = true }
+thiserror           = { workspace = true }
+log                 = { workspace = true }

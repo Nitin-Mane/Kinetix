@@ -1,0 +1,11 @@
+[package]
+name        = "kinetix_gc"
+description = "Reference-counting garbage collector for the Kinetix runtime"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_vm = { workspace = true }
+log        = { workspace = true }

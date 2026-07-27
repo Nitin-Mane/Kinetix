@@ -1,0 +1,11 @@
+[package]
+name        = "kinetix_syntax"
+description = "Syntax highlighting for Kinetix (token-based and tree-sitter)"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer = { workspace = true }
+serde         = { workspace = true }

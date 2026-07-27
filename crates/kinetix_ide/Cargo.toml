@@ -1,0 +1,22 @@
+[package]
+name        = "kinetix_ide"
+description = "Native IDE runner, editor engine, debugger UI integration, and live matrix visualizer for Kinetix"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer    = { workspace = true }
+kinetix_parser   = { workspace = true }
+kinetix_types    = { workspace = true }
+kinetix_hir      = { workspace = true }
+kinetix_codegen  = { workspace = true }
+kinetix_vm       = { workspace = true }
+kinetix_stdlib   = { workspace = true }
+kinetix_syntax   = { workspace = true }
+kinetix_debugger = { workspace = true }
+kinetix_lsp      = { workspace = true }
+serde            = { workspace = true }
+serde_json       = { workspace = true }
+log              = { workspace = true }

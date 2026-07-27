@@ -1,0 +1,19 @@
+module examples.frame_safe_kinematics;
+
+use kx.geometry::{frame, point, transform};
+use kx.units::m;
+
+frame World;
+frame Base;
+frame Tool;
+
+fn main() -> i32 {
+    let world_to_base: transform<f64, World, Base> = transform.identity();
+    let base_to_tool: transform<f64, Base, Tool> = transform.identity();
+    let target_world: point<f64, World, m> = point(1.0m, 0.0m, 0.5m);
+
+    let world_to_tool = world_to_base * base_to_tool;
+    let target_tool = world_to_tool.apply(target_world);
+
+    return 0;
+}

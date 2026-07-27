@@ -1,0 +1,12 @@
+module examples.hello;
+
+extern "C" {
+    fn puts(text: *const i8) -> i32;
+}
+
+fn main() -> i32 {
+    unsafe {
+        puts(c"Hello from Kinetix");
+    }
+    return 0;
+}

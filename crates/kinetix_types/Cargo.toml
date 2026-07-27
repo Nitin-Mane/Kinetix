@@ -1,0 +1,14 @@
+[package]
+name        = "kinetix_types"
+description = "Type system, type inference, and type checker for Kinetix"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+kinetix_lexer  = { workspace = true }
+kinetix_ast    = { workspace = true }
+smol_str       = { workspace = true }
+thiserror      = { workspace = true }
+rustc-hash     = { workspace = true }
